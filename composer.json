@@ -1,0 +1,67 @@
+{
+  "name": ":vendor_slug/:package_slug",
+  "description": ":package_description",
+  "keywords": [
+    ":vendor_name",
+    "prestashop",
+    ":module_name"
+  ],
+  "homepage": "https://github.com/:vendor_slug/:package_slug",
+  "license": "AFL-3.0",
+  "author": ":author_name",
+  "authors": [
+    {
+      "name": ":author_name",
+      "email": "author@domain.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "ibrostudio/prestashop-module-helper": "^1.0"
+  },
+  "require-dev": {
+    "ext-readline": "*",
+    "ext-curl": "*",
+    "friendsofphp/php-cs-fixer": "^3.59",
+    "phpstan/phpstan": "^1.11",
+    "prestashop/autoindex": "^2.1",
+    "prestashop/header-stamp": "dev-no-ps-author",
+    "prestashop/php-dev-tools": "^5.0",
+    "squizlabs/php_codesniffer": "^3.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "PrestaShop\\Module\\Skeleton\\": "src/"
+    },
+    "classmap": [
+      "controllers",
+      ":module_filename.php"
+    ]
+  },
+  "scripts": {
+    "presta:api:install": "@php vendor/ibrostudio/prestashop-module-helper/cli api install --namespace=\\\\PrestaShop\\\\Module\\\\TrusttReviews\\\\",
+    "presta:make:api": "vendor/bin/presta make:api",
+    "presta:make:api-request": "vendor/bin/presta make:api-request",
+    "analyse": "vendor/bin/phpstan --configuration=tests/phpstan/phpstan.neon analyse",
+    "autoindex": "vendor/bin/autoindex prestashop:add:index ./",
+    "format": "vendor/bin/php-cs-fixer fix",
+    "header-stamp": "vendor/bin/header-stamp --license=./.header-stamp-afl --exclude=node_modules,vendor"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/iBroStudio/header-stamp",
+      "no-api": true
+    },
+    {
+      "type": "path",
+      "url": "../prestashop-module-helper"
+    }
+  ]
+}
