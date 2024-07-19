@@ -42,7 +42,7 @@
   "scripts": {
     "analyse": "vendor/bin/phpstan --configuration=tests/phpstan/phpstan.neon analyse",
     "autoindex": "vendor/bin/autoindex prestashop:add:index ./",
-    "cli": "@php vendor/ibrostudio/prestashop-module-helper/cli \\\\PrestaShop\\\\Module\\\\TrusttReviews\\\\",
+    "cli": "@php vendor/ibrostudio/prestashop-module-helper/cli namespace=\\\\PrestaShop\\\\Module\\\\TrusttReviews\\\\",
     "format": "vendor/bin/php-cs-fixer fix",
     "header-stamp": "vendor/bin/header-stamp --license=./.header-stamp-afl --exclude=node_modules,vendor"
   },
