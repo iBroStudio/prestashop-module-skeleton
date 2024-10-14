@@ -16,19 +16,10 @@
       "role": "Developer"
     }
   ],
+  "version": "1.0.0",
   "require": {
     "php": "^8.1",
     "ibrostudio/prestashop-module-helper": "^1.0"
-  },
-  "require-dev": {
-    "ext-readline": "*",
-    "ext-curl": "*",
-    "friendsofphp/php-cs-fixer": "^3.59",
-    "phpstan/phpstan": "^1.11",
-    "prestashop/autoindex": "^2.1",
-    "prestashop/header-stamp": "dev-no-ps-author",
-    "prestashop/php-dev-tools": "^5.0",
-    "squizlabs/php_codesniffer": "^3.10"
   },
   "autoload": {
     "psr-4": {
@@ -40,11 +31,7 @@
     ]
   },
   "scripts": {
-    "analyse": "vendor/bin/phpstan --configuration=tests/phpstan/phpstan.neon analyse",
-    "autoindex": "vendor/bin/autoindex prestashop:add:index ./",
-    "cli": "@php vendor/ibrostudio/prestashop-module-helper/cli namespace=\\\\PrestaShop\\\\Module\\\\TrusttReviews\\\\",
-    "format": "vendor/bin/php-cs-fixer fix",
-    "header-stamp": "vendor/bin/header-stamp --license=./.header-stamp-afl --exclude=node_modules,vendor"
+    "cli": "@php vendor/ibrostudio/prestashop-module-helper/cli namespace=\\\\PrestaShop\\\\Module\\\\Skeleton\\\\"
   },
   "config": {
     "sort-packages": true

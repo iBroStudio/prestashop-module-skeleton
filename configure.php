@@ -397,4 +397,4 @@ foreach ($files as $file) {
 confirm('Execute `composer install`?')
 && run('composer install');
 
-// unlink(__FILE__);
+unlink(__FILE__);
