@@ -43,10 +43,6 @@
       "type": "vcs",
       "url": "https://github.com/iBroStudio/header-stamp",
       "no-api": true
-    },
-    {
-      "type": "path",
-      "url": "../prestashop-module-helper"
     }
   ]
 }
