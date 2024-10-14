@@ -17,6 +17,7 @@
     }
   ],
   "version": "1.0.0",
+  "type": "prestashop-module",
   "require": {
     "php": "^8.1",
     "ibrostudio/prestashop-module-helper": "^1.0"
@@ -34,6 +35,8 @@
     "cli": "@php vendor/ibrostudio/prestashop-module-helper/cli namespace=\\\\PrestaShop\\\\Module\\\\Skeleton\\\\"
   },
   "config": {
+    "preferred-install": "dist",
+    "prepend-autoloader": false,
     "sort-packages": true
   },
   "minimum-stability": "dev",
@@ -43,6 +46,10 @@
       "type": "vcs",
       "url": "https://github.com/iBroStudio/header-stamp",
       "no-api": true
+    },
+    {
+      "type": "path",
+      "url": "../prestashop-module-helper"
     }
   ]
 }
