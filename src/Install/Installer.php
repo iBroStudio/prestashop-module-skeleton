@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace PrestaShop\Module\Skeleton\Install;
 
+use IBroStudio\ModuleHelper\Install\InstallManager;
 use Module;
 
 final class Installer extends InstallManager

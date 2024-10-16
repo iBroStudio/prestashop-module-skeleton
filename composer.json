@@ -32,7 +32,7 @@
     ]
   },
   "scripts": {
-    "cli": "@php vendor/ibrostudio/prestashop-module-helper/cli namespace=\\\\PrestaShop\\\\Module\\\\Skeleton\\\\"
+    "cli": "@php vendor/ibrostudio/prestashop-module-helper/cli"
   },
   "config": {
     "preferred-install": "dist",
