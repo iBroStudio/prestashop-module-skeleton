@@ -389,6 +389,7 @@ foreach ($files as $file) {
     match (true) {
         str_contains($file, determineSeparator('skeletonModule.php')) => rename($file, determineSeparator('./' . $moduleFilename . '.php')),
         str_contains($file, determineSeparator('skeletonPaymentModule.php')) => rename($file, determineSeparator('./' . $moduleFilename . '.php')),
+        str_contains($file, determineSeparator('src/Config/SkeletonConfig.php')) => rename($file, determineSeparator('./src/Config/'.$className.'Config.php')),
         str_contains($file, 'README.md') => remove_readme_paragraphs($file),
         default => [],
     };

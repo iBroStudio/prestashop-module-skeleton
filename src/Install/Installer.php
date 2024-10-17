@@ -11,17 +11,16 @@ namespace PrestaShop\Module\Skeleton\Install;
 
 use IBroStudio\ModuleHelper\Install\InstallManager;
 use Module;
+use PrestaShop\Module\Skeleton\Enums\SkeletonConfig;
 
 final class Installer extends InstallManager
 {
     /**
-     * Keys/values to save in Configuration table
+     * Module config values to save in Configuration table
      */
     protected function configuration(): array
     {
-        return [
-            // 'configuration_key' => 'value',
-        ];
+        return SkeletonConfig::cases();
     }
 
     /**
